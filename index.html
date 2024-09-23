@@ -9,6 +9,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style.css">
     <script src="https://unpkg.com/feather-icons"></script>
+    <style>
+      #average1-chart {
+        max-width: 100%;
+        height: 185px;
+        background-color: dodgerblue;
+      }
+      </style>
 </head>
 <body>
 
@@ -31,16 +38,181 @@
       </div>
       <!-- SIDEBAR -->
       
+      <div class="main-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-8 col-xl-8">
 
-      <div class="main-content">content</div>
+
+                    <div class="row">
+                      
+                      <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="card">
+
+
+
+
+                          <div class="row">
+                              <div class="col-xs-6 col-sm-6 card-body">
+                                <div class="row">
+                                  <div class="col-xs-6 col-sm-4">
+                                    <i data-feather="eye" class="eye-icon"></i>
+                                  </div>
+                                  <div class="col-xs-6 col-sm-8">
+                                    <h5>10k</h5>
+                                    <h5>Visitors</h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xs-6 col-sm-6 card-body">
+                                <div class="row">
+                                  <div class="col-xs-6 col-sm-4">
+                                    <i data-feather="music" class="music-icon"></i>
+                                  </div>
+                                  <div class="col-xs-6 col-sm-8">
+                                    <h5>100%</h5>
+                                    <h5>Volume</h5>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+
+
+
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-6 card-body">
+                              <div class="row">
+                                <div class="col-xs-6 col-sm-4">
+                                  <i data-feather="file-text" class="file-text-icon"></i>
+                                </div>
+                                <div class="col-xs-6 col-sm-8">
+                                  <h5>10k</h5>
+                                  <h5>Files</h5>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 card-body">
+                              <div class="row">
+                                <div class="col-xs-6 col-sm-4">
+                                  <i data-feather="mail" class="mail-icon"></i>
+                                </div>
+                                <div class="col-xs-6 col-sm-8">
+                                  <h5>10k</h5>
+                                  <h5>Mails</h5>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+
+
+
+
+
+
+                      <div class="col-xs-12 col-sm-12 col-md-6">
+                        <div class="card">
+
+
+
+
+                          <div class="row">
+                              <div class="col-xs-6 col-sm-6 card-body">
+                                <div class="row">
+                                  <div class="col-xs-6 col-sm-4">
+                                    <i data-feather="share-2" class="share-2-icon"></i>
+                                  </div>
+                                  <div class="col-xs-6 col-sm-8">
+                                    <h5>1000</h5>
+                                    <h5>Shares</h5>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="col-xs-6 col-sm-6 card-body">
+                                <div class="row">
+                                  <div class="col-xs-6 col-sm-4">
+                                    <i data-feather="wifi" class="wifi-icon"></i>
+                                  </div>
+                                  <div class="col-xs-6 col-sm-8">
+                                    <h5>600</h5>
+                                    <h5>Network</h5>
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+
+
+
+                          <div class="row">
+                            <div class="col-xs-6 col-sm-6 card-body">
+                              <div class="row">
+                                <div class="col-xs-6 col-sm-4">
+                                  <i data-feather="rotate-ccw" class="return-text-icon"></i>
+                                </div>
+                                <div class="col-xs-6 col-sm-8">
+                                  <h5>3550</h5>
+                                  <h5>Returns</h5>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-xs-6 col-sm-6 card-body">
+                              <div class="row">
+                                <div class="col-xs-6 col-sm-4">
+                                  <i data-feather="shopping-cart" class="shopping-cart-icon"></i>
+                                </div>
+                                <div class="col-xs-6 col-sm-8">
+                                  <h5>100%</h5>
+                                  <h5>Order</h5>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                    </div>
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 ">
+              <div class="average1-chart-wrapper">
+                <span>Average Support Requests</span>
+                <div id="average1-chart">
+                </div>
+              </div>
+              
+          </div>
+          </div>
+        </div>
+      </div>
       
       
       
       
       
       
-      
-      
+      <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+      <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+      <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
       <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
