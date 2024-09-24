@@ -414,11 +414,55 @@ ul li > a{
 
 
 /*===============================CHARTS===============================*/
-.average1-chart-wrapper {
+.average1-chart-wrapper, .average2-chart-wrapper {
   position: relative;
 
 }
-.average1-chart-wrapper > span {
+
+.average1-chart-wrapper {
+  margin-right: 16px;
+}
+
+.average2-chart-wrapper {
+  margin-right: 0px;
+}
+
+.average1-chart-number, .average1-chart-solve, .average1-chart-title, .average2-chart-number, .average2-chart-solve{
+  position: absolute;
+  color: white;
+}
+
+.average1-chart-number, .average2-chart-number{
+  bottom: 50px;
+  left: 25px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.average1-chart-solve {
+  bottom: 25px;
+  left: 25px;
+}
+
+
+.average2-chart-solve {
+  bottom: 25px;
+  left: 25px;
+}
+
+
+.average1-chart-title {
+  top: 20px;
+  left: 20px;
+}
+
+
+
+.average2-chart-wrapper {
+  position: relative;
+
+}
+.average2-chart-wrapper > .average2-chart-title {
   position: absolute;
   top: 20px;
   color: white;
@@ -478,6 +522,13 @@ ul li > a{
 @media only screen and (min-width: 992px) {
   .card {
     padding-right: 16px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .average1-chart-wrapper, .average2-chart-wrapper{
+    margin-right: 0px;
+    margin-bottom: 16px;
   }
 }
 /*=========================Media Queries=========================*/
