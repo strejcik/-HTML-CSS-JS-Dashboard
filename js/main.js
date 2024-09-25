@@ -3,8 +3,8 @@ var isChecked = true;
 function openNav() {
     document.getElementsByClassName("sidepanel")[0].style.width = "250px";
     document.getElementsByClassName("dashboard-li")[0].classList.add("dashboard-li-active");
-    document.getElementsByClassName("main-content")[0].classList.remove("main-content-sidebar-closed");
-    document.getElementsByClassName("main-content")[0].classList.add("main-content-sidebar-open");
+    // document.getElementsByClassName("main-content")[0].classList.remove("main-content-sidebar-closed");
+    // document.getElementsByClassName("main-content")[0].classList.add("main-content-sidebar-open");
     isChecked =!!isChecked;
     isOpen = true;
   }
@@ -14,8 +14,8 @@ function openNav() {
     document.getElementsByClassName("sidepanel")[0].style.width = "0";
     document.getElementsByClassName("sidepanel")[0].style.display = "none";
     document.getElementsByClassName("dashboard-li")[0].classList.remove("dashboard-li-active");
-    document.getElementsByClassName("main-content")[0].classList.remove("main-content-sidebar-open");
-    document.getElementsByClassName("main-content")[0].classList.add("main-content-sidebar-closed");
+    // document.getElementsByClassName("main-content")[0].classList.remove("main-content-sidebar-open");
+    // document.getElementsByClassName("main-content")[0].classList.add("main-content-sidebar-closed");
     isOpen = false;
     isChecked =!!isChecked;
   }
@@ -65,7 +65,9 @@ function openNav() {
         easing: "ease-in"
       });
 
-      
+
+
+
       document.getElementById("mySidepanel").animate([
         { width: "70px" },
         { width: "250px" },
@@ -446,6 +448,103 @@ const fadeEffect = setInterval(() => {
         chart.cursor.lineX.fill = am4core.color("#fff");
         chart.cursor.lineX.fillOpacity = 0;
         chart.padding(0, 0, 0, 0);
+
+
+
+
+
+
+
+
+
+
+        am4core.useTheme(am4themes_animated);
+        // Themes end
+
+        var chart = am4core.create("account-chart", am4charts.XYChart);
+        chart.hiddenState.properties.opacity = 0;
+        // this creates initial fade-in
+
+        var data = [];
+        var grothactual = 100;
+        var actual = 200;
+        var plan = 300;
+
+        for (var i = 1; i < 120; i++) {
+            grothactual += Math.round((Math.random() < 0.5 ? 1 : -1) * Math.random() * 4);
+            actual = Math.round(grothactual + Math.random() * 5 + i / 5 - (Math.random() < 0.5 ? 1 : -1) * Math.random() * 2);
+            plan = Math.round(actual + Math.random() * 5 + i / 5 - (Math.random() < 0.5 ? 1 : -1) * Math.random() * 3);
+            data.push({
+                date: new Date(2018, 0, i),
+                grothactual: grothactual,
+                actual: actual,
+                plan: plan
+            });
+        }
+
+        chart.data = data;
+
+        var dateAxis = chart.xAxes.push(new am4charts.DateAxis());
+        dateAxis.tooltip.disabled = true;
+        dateAxis.renderer.grid.template.location = 0;
+        dateAxis.renderer.inside = true;
+        dateAxis.startLocation = 0.1;
+        dateAxis.endLocation = 0.4;
+        dateAxis.renderer.grid.template.strokeDasharray = "10,5";
+        dateAxis.renderer.grid.template.strokeOpacity = 0.1;
+
+        var valueAxis = chart.yAxes.push(new am4charts.ValueAxis());
+        valueAxis.tooltip.disabled = true;
+        valueAxis.renderer.inside = true;
+        valueAxis.renderer.grid.template.strokeDasharray = "10,5";
+        valueAxis.renderer.grid.template.strokeOpacity = 0.1;
+
+        var series = chart.series.push(new am4charts.LineSeries());
+        series.dataFields.dateX = "date";
+        series.dataFields.valueY = "plan";
+        series.tooltipText = "Plan: {valueY.value}";
+        series.name = "Plan";
+        series.sequencedInterpolation = true;
+        series.stroke = am4core.color("#f44336");
+        series.fill = am4core.color("#f44336");
+        series.defaultState.transitionDuration = 1000;
+        series.tensionX = 0.7;
+        series.fillOpacity = 1;
+
+        var series2 = chart.series.push(new am4charts.LineSeries());
+        series2.dataFields.dateX = "date";
+        series2.dataFields.valueY = "actual";
+        series2.tooltipText = "Actual: {valueY.value}";
+        series2.name = "Actual";
+        series2.sequencedInterpolation = true;
+        series2.defaultState.transitionDuration = 1500;
+        series2.stroke = am4core.color("#7759de");
+        series2.fill = am4core.color("#7759de");
+        series2.tensionX = 0.7;
+        series2.fillOpacity = 1;
+
+        var series3 = chart.series.push(new am4charts.LineSeries());
+        series3.dataFields.dateX = "date";
+        series3.dataFields.valueY = "grothactual";
+        series3.tooltipText = "Groth Actual: {valueY.value}";
+        series3.name = "Groth Actual";
+        series3.sequencedInterpolation = true;
+        series3.defaultState.transitionDuration = 1500;
+        series3.stroke = am4core.color("#4caf50");
+        series3.fill = am4core.color("#4caf50");
+        series3.tensionX = 0.7;
+        series3.fillOpacity = 1;
+
+        chart.cursor = new am4charts.XYCursor();
+        chart.cursor.xAxis = dateAxis;
+
+        //add legend
+        chart.legend = new am4charts.Legend();
+        chart.legend.position = 'top';
+
+        chart.seriesContainer.zIndex = -1;
+
+        chart.padding(5, 0, -5, -5);
 
 
 

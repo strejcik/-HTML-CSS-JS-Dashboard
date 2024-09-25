@@ -115,6 +115,8 @@ width: 69px;
 }
 /*==================Sidebar icons==================*/
 
+/*=============================ICON STYLING=============================*/
+
 .eye-icon, .music-icon, .file-text-icon, .mail-icon, .share-2-icon, .wifi-icon, .return-text-icon, .shopping-cart-icon{
   height: 28px;
   width: 28px;
@@ -138,6 +140,10 @@ width: 69px;
 
 .share-2-icon, .wifi-icon, .return-text-icon, .shopping-cart-icon {
   color: #7759de;
+}
+
+.card-icon {
+  text-align: center;
 }
 
 
@@ -264,6 +270,7 @@ ul li > a{
     width: 70px;
     height: 100%;
     position: fixed;
+    z-index: 9999 !important;
   }
   
   .opennav:hover {
@@ -387,6 +394,10 @@ ul li > a{
   background-color: #fff;
   padding: 28px;
 }
+.account-chart-card-body {
+  background-color: #fff;
+  padding: 28px;
+}
 
 .card > .row:nth-child(1) {
   border-left: 1px solid #ccc;
@@ -469,6 +480,17 @@ ul li > a{
   left: 20px;
 }
 
+
+
+
+
+
+
+
+.account-chart > div > svg > g > g:nth-child(1){
+  fill-opacity: 1;
+}
+
 /*===============================CHARTS===============================*/
 
 
@@ -517,18 +539,56 @@ ul li > a{
   .card {
     padding-right: 16px;
   }
+
+  .account-chart-card {
+    border: 1px solid lightgray;
+    margin-bottom: 16px;
+    padding-right: initial;
+    padding: 1px;
+  }
+
 }
 
-@media only screen and (min-width: 992px) {
+@media only screen and (min-width: 993px) {
   .card {
     padding-right: 16px;
   }
+
+  .account-chart-card {
+    margin-bottom: 16px;
+    border: 1px solid lightgray;
+    padding: 1px;
+  }
+
 }
 
 @media only screen and (max-width: 768px) {
   .average1-chart-wrapper, .average2-chart-wrapper{
     margin-right: 0px;
     margin-bottom: 16px;
+  }
+  .account-chart-card {
+    margin-bottom: 16px;
+    border: 1px solid lightgray;
+    padding-right: 0px;
+    padding: 1px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 992px){
+  .card-1 {
+    margin-right:16px;
+  }
+  .account-chart-card {
+    margin-bottom: 16px;
+    border: 1px solid lightgray;
+    padding: 1px;
+  }
+}
+
+@media only screen and (max-width:375px) {
+  .row > .card-body:nth-child(1) {
+    border-right: 0px;
   }
 }
 /*=========================Media Queries=========================*/
