@@ -57,6 +57,38 @@ body, html{
     scroll-behavior: smooth;
     background-color: #EEF2F6;
 }
+h6 {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+  width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+  border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: lightgray;
+}
 
 /*============================STYLE RESET============================*/
 
@@ -144,6 +176,14 @@ width: 69px;
 
 .card-icon {
   text-align: center;
+}
+
+.trending-down-icon {
+  color: #f44336;
+}
+
+.trending-up-icon{
+  color: #2196f3;
 }
 
 
@@ -392,12 +432,24 @@ ul li > a{
 }
 .card-body {
   background-color: #fff;
-  padding: 28px;
+  padding-left: 16px;
+  padding-top: 28px;
+  padding-right: 28px;
+  padding-bottom: 28px;
 }
+
+
+
 .account-chart-card-body {
   background-color: #fff;
-  padding: 28px;
+  padding-left: 16px;
+  padding-bottom: 16px;
+  padding-top: 16px;
 }
+
+
+
+
 
 .card > .row:nth-child(1) {
   border-left: 1px solid #ccc;
@@ -425,10 +477,11 @@ ul li > a{
 
 
 /*===============================CHARTS===============================*/
-.average1-chart-wrapper, .average2-chart-wrapper {
+.average1-chart-wrapper, .average2-chart-wrapper, .time-user-chart-wrapper{
   position: relative;
 
 }
+
 
 .average1-chart-wrapper {
   margin-right: 16px;
@@ -438,33 +491,46 @@ ul li > a{
   margin-right: 0px;
 }
 
+.time-user-chart-wrapper {
+  border: 1px solid lightgray;
+  margin-top: 16px;
+  background-color: #fff;
+  padding: 1px;
+}
+
+
 .average1-chart-number, .average1-chart-solve, .average1-chart-title, .average2-chart-number, .average2-chart-solve{
   position: absolute;
   color: white;
 }
 
+.time-user-chart-title {
+  position: absolute;
+  font-weight: 500;
+}
+
 .average1-chart-number, .average2-chart-number{
   bottom: 50px;
-  left: 25px;
+  left: 16px;
   font-size: 24px;
   font-weight: 700;
 }
 
 .average1-chart-solve {
-  bottom: 25px;
-  left: 25px;
+  bottom: 16px;
+  left: 16px;
 }
 
 
 .average2-chart-solve {
-  bottom: 25px;
-  left: 25px;
+  bottom: 16px;
+  left: 16px;
 }
 
 
 .average1-chart-title {
-  top: 20px;
-  left: 20px;
+  top: 16px;
+  left: 16px;
 }
 
 
@@ -475,13 +541,22 @@ ul li > a{
 }
 .average2-chart-wrapper > .average2-chart-title {
   position: absolute;
-  top: 20px;
+  top: 16px;
   color: white;
-  left: 20px;
+  left: 16px;
 }
 
 
-
+.account-chart-title {
+  color: #2196F4;
+  margin-bottom:16px;
+}
+.account-chart-annual-profit-wrapper {
+  padding-left: 32px;
+}
+.account-chart-marketing-growth-wrapper > span,  .account-chart-annual-profit-wrapper > span{
+  color: #686c71;
+}
 
 
 
@@ -494,9 +569,77 @@ ul li > a{
 /*===============================CHARTS===============================*/
 
 
+/*===============================Animations===========================*/
+
+.fadeIn-3 {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 3000ms;
+  }
+.fadeIn-35 {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 3500ms;
+  }
+.fadeIn-4 {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 4000ms;
+  }
+.fadeIn-45 {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 4500ms;
+  }
+
+.fadeIn-5 {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 5000ms;
+}
+
+.fadeIn-55 {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 5500ms;
+  }
+  @-webkit-keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  }
+  @keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+  } 
 
 
 
+
+/*===============================Animations===========================*/
 
 
 
@@ -548,16 +691,36 @@ ul li > a{
   }
 
 }
-
-@media only screen and (min-width: 993px) {
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .account-chart-card {
+    border: 1px solid lightgray;
+    padding-right: initial;
+    padding: 1px;
+  }
   .card {
     padding-right: 16px;
+    padding-bottom: initial;
+  }
+
+  .card-2 {
+    margin-bottom: 16px;
+  }
+
+}
+
+
+@media only screen and (min-width: 993px) and (max-width: 1023.20px) {
+  .card {
+    padding-right: initial;
   }
 
   .account-chart-card {
-    margin-bottom: 16px;
     border: 1px solid lightgray;
+    padding-right: initial;
     padding: 1px;
+  }
+  .card-2 {
+    margin-left: 16px;
   }
 
 }
@@ -568,21 +731,32 @@ ul li > a{
     margin-bottom: 16px;
   }
   .account-chart-card {
-    margin-bottom: 16px;
     border: 1px solid lightgray;
     padding-right: 0px;
     padding: 1px;
   }
+  .time-user-chart-wrapper {
+    margin-top: 0px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px){
+  .card {
+    padding-right: initial;
+  }
   .card-1 {
     margin-right:16px;
   }
   .account-chart-card {
-    margin-bottom: 16px;
     border: 1px solid lightgray;
     padding: 1px;
+  }
+
+}
+
+@media only screen and (max-width:568px) {
+  .account-chart-annual-profit-wrapper {
+    padding-left: initial;
   }
 }
 
