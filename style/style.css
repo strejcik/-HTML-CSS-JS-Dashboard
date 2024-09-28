@@ -440,12 +440,24 @@ ul li > a{
 
 
 
-.account-chart-card-body {
+.account-chart-card-body, .type-chart-card-body{
   background-color: #fff;
   padding-left: 16px;
   padding-bottom: 16px;
   padding-top: 16px;
 }
+
+.type-chart-card-body {
+  margin-top: initial;
+  border: 1px solid lightgray;
+  margin-right: 16px;
+}
+
+.type-chart-card {
+  margin-top: 16px;
+}
+
+
 
 
 
@@ -533,7 +545,21 @@ ul li > a{
   left: 16px;
 }
 
+.type-chart-title > h5{
+  color: #111;
+  font-weight: 500;
+}
 
+.type-chart-title {
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: 16px;
+  background: white;
+  border-left: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
 
 .average2-chart-wrapper {
   position: relative;
@@ -558,8 +584,26 @@ ul li > a{
   color: #686c71;
 }
 
+.desktop-computers-item::before, .smartphones-item::before, .tablets-item::before {
+  content: "●";
+}
 
+.desktop-computers-item::before {
+  color: #67B7DC;
+}
 
+.smartphones-item::before {
+  color: #8067DC;
+}
+
+.tablets-item::before {
+  color: #DC67CE;
+}
+
+.desktop-computers-percentage, .smartphones-percentage, .tablets-percentage{
+  float: right;
+  margin-right: 16px;
+}
 
 
 .account-chart > div > svg > g > g:nth-child(1){
@@ -685,9 +729,15 @@ ul li > a{
 
   .account-chart-card {
     border: 1px solid lightgray;
-    margin-bottom: 16px;
     padding-right: initial;
     padding: 1px;
+  }
+  .type-chart-card-body {
+    margin-top: initial;
+  }
+
+  .type-chart-card {
+    margin-top: initial;
   }
 
 }
@@ -706,6 +756,8 @@ ul li > a{
     margin-bottom: 16px;
   }
 
+  
+
 }
 
 
@@ -719,8 +771,18 @@ ul li > a{
     padding-right: initial;
     padding: 1px;
   }
+
+  .type-chart-card-body {
+    margin-top: initial;
+  }
+
+
   .card-2 {
     margin-left: 16px;
+  }
+  
+  .type-chart-card {
+    margin-top: initial;
   }
 
 }
@@ -735,8 +797,12 @@ ul li > a{
     padding-right: 0px;
     padding: 1px;
   }
-  .time-user-chart-wrapper {
+  .time-user-chart-wrapper, .type-chart-card-body{
     margin-top: 0px;
+  }
+  
+  .type-chart-card {
+    margin-top: initial;
   }
 }
 
@@ -750,6 +816,14 @@ ul li > a{
   .account-chart-card {
     border: 1px solid lightgray;
     padding: 1px;
+  }
+
+  .type-chart-card-body {
+    margin-top: initial;
+  }
+
+  .type-chart-card {
+    margin-top: initial;
   }
 
 }
