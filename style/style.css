@@ -187,6 +187,31 @@ width: 69px;
 }
 
 
+.usa-percentage-arrow-icon, .india-percentage-arrow-icon, .china-percentage-arrow-icon, .brazil-percentage-arrow-icon, .other-percentage-arrow-icon {
+  width: 14px;
+  margin-bottom: 4px;
+}
+
+.usa-percentage > .usa-percentage-arrow-icon {
+  color: dodgerblue;
+}
+
+.india-percentage > .india-percentage-arrow-icon {
+  color: #F44336;
+}
+
+.china-percentage > .china-percentage-arrow-icon {
+  color: #4CAF50;
+}
+
+.brazil-percentage > .brazil-percentage-arrow-icon {
+  color: #FF9800;
+}
+
+.other-item-percentage > .other-percentage-arrow-icon {
+  color: #7759DE;
+}
+
 
 
 /*=============================ICON STYLING=============================*/
@@ -440,23 +465,28 @@ ul li > a{
 
 
 
-.account-chart-card-body, .type-chart-card-body{
+.account-chart-card-body, .type-chart-card-body, .map-chart-card-body{
   background-color: #fff;
   padding-left: 16px;
   padding-bottom: 16px;
   padding-top: 16px;
 }
 
-.type-chart-card-body {
+.type-chart-card-body, .map-chart-card-body {
   margin-top: initial;
   border: 1px solid lightgray;
   margin-right: 16px;
 }
 
-.type-chart-card {
-  margin-top: 16px;
+.map-chart-card-body {
+  margin-top: initial;
+  border: 1px solid lightgray;
+  margin-right: initial;
 }
 
+.type-chart-card, .map-chart-card {
+  margin-top: 16px;
+}
 
 
 
@@ -579,6 +609,17 @@ ul li > a{
   border-right: 1px solid lightgray;
 }
 
+.map-chart-title {
+  padding-left: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-right: initial;
+  background: white;
+  border-left: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  border-right: 1px solid lightgray;
+}
+
 .average2-chart-wrapper {
   position: relative;
 
@@ -606,6 +647,30 @@ ul li > a{
   content: "●";
 }
 
+.india-item, .india-amount, .india-percentage, .usa-item, .usa-amount, .usa-percentage, .china-item, .china-amount, .china-percentage, .brazil-item, .brazil-amount, .brazil-percentage, .other-item, .other-item-amount, .other-item-percentage {
+  text-align: center;
+}
+.india-item::before {
+  content: "●";
+  color: #F44336;
+}
+.usa-item::before {
+  content: "●";
+  color: dodgerblue;
+}
+.china-item::before {
+  content: "●";
+  color: #4CAF50;
+}
+.brazil-item::before {
+  content: "●";
+  color: #FF9800;
+}
+.other-item::before {
+  content: "●";
+  color: #7759DE;
+}
+
 .desktop-computers-item::before {
   color: #67B7DC;
 }
@@ -626,6 +691,26 @@ ul li > a{
 
 .account-chart > div > svg > g > g:nth-child(1){
   fill-opacity: 1;
+}
+
+.usa-percentage > span{
+  color: dodgerblue;
+}
+
+.india-percentage > span {
+  color: #F44336;
+}
+
+.china-percentage > span {
+  color: #4CAF50;
+}
+
+.brazil-percentage > span {
+  color: #FF9800;
+}
+
+.other-item-percentage > span {
+  color: #7759DE;
 }
 
 /*===============================CHARTS===============================*/
@@ -689,6 +774,24 @@ ul li > a{
   animation-fill-mode: both;
   animation-delay: 5500ms;
   }
+.fadeIn-6 {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 6000ms;
+  }
+.fadeIn-65 {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  animation-delay: 6500ms;
+  }
   @-webkit-keyframes fadeIn {
   0% {opacity: 0;}
   100% {opacity: 1;}
@@ -750,7 +853,17 @@ ul li > a{
     padding-right: initial;
     padding: 1px;
   }
+
+  .type-chart-title {
+    margin-right: initial;
+  }
+  
   .type-chart-card-body {
+    margin-top: initial;
+    margin-right: initial;
+  }
+
+  .map-chart-card {
     margin-top: initial;
   }
 
@@ -774,7 +887,18 @@ ul li > a{
     margin-bottom: 16px;
   }
 
-  
+  .map-chart-card {
+    margin-top: 16px;
+  }
+
+
+  .type-chart-card {
+    margin-top: 16px;
+  }
+
+  .type-chart-title, .type-chart-card-body {
+    margin-right: initial;
+  }
 
 }
 
@@ -793,7 +917,9 @@ ul li > a{
   .type-chart-card-body {
     margin-top: initial;
   }
-
+  .map-chart-card {
+    margin-top: initial;
+  }
 
   .card-2 {
     margin-left: 16px;
@@ -801,6 +927,10 @@ ul li > a{
   
   .type-chart-card {
     margin-top: initial;
+  }
+
+  .type-chart-title, .type-chart-card-body{
+    margin-right: initial;
   }
 
 }
@@ -819,9 +949,20 @@ ul li > a{
     margin-top: 0px;
   }
   
-  .type-chart-card {
+  .type-chart-card{
     margin-top: initial;
   }
+
+  .map-chart-card {
+    margin-top: initial;
+  }
+
+  .type-chart-title, .type-chart-card-body{
+    margin-right: initial;
+  }
+
+
+  
 }
 
 @media only screen and (min-width: 768px) and (max-width: 992px){
@@ -842,6 +983,13 @@ ul li > a{
 
   .type-chart-card {
     margin-top: initial;
+  }
+  .map-chart-card {
+    margin-top: initial;
+  }
+
+  .type-chart-title, .type-chart-card-body{
+    margin-right: initial;
   }
 
 }
