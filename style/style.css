@@ -491,8 +491,26 @@ ul li > a{
 /*===============================CHARTS===============================*/
 .average1-chart-wrapper, .average2-chart-wrapper, .time-user-chart-wrapper{
   position: relative;
-
 }
+
+#am-map-chart > div > svg > g > g:nth-child(2) > g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > g:nth-child(2) > g:nth-child(2) {
+  transform: translate(0px,0px);
+}
+
+#am-map-chart > div > svg > g > g:nth-child(2) > g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > g:nth-child(2) > g:nth-child(2) > g > g:nth-child(4) > g:nth-child(2) {
+  transform: translate(7px, 8px);
+}
+
+#am-map-chart > div > svg > g > g:nth-child(2) > g:nth-child(1) > g:nth-child(2) > g:nth-child(1) > g:nth-child(2) > g:nth-child(2) > g > g:nth-child(4) > g:nth-child(1) > path {
+  d: path("M3,0 L27,0 a3,3 0 0 1 3,3 L30,30 a3,3 0 0 1 -3,3 L3,33 a3,3 0 0 1 -3,-3 L0,3 a3,3 0 0 1 3,-3 Z")
+}
+
+
+#am-map-chart > div > svg > g > g:nth-child(2) > g:nth-child(2) > g > g:nth-child(3) {
+  transform: translate(0px, 125px);
+}
+
+
 
 
 .average1-chart-wrapper {
