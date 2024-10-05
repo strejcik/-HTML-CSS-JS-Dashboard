@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dashboard</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Mada:wght@200..900&display=swap" rel="stylesheet">
@@ -28,14 +28,20 @@
       #time-user {
         margin-top: 16px;
         max-width: 100%;
-        height: 500px;
+        height: 582px;
         background-color: #fff;
       }
 
       #am-map-chart {
         max-width: 100%;
-        height: 100%;
+        height: 110px;
       }
+
+      #coversions-chart1 {
+        background-color: #fff;
+      }
+
+
       </style>
 </head>
 <body>
@@ -231,62 +237,81 @@
                         </div>
                       </div>
                       
-                      <div class="col-xxs-12 col-xs-12 col-md-6 col-6">
-                        <div class="card fadeIn-6">
-                          <div class="type-chart-card">
-                            <div class="type-chart-title">
-                              <h5>Sale report of year</h5>
-                            </div>
-                            <div class="type-chart-card-body">
-                              <div id="type-chart"></div>
-                              <div class="type-chart-description">
-                                
-                                
-                                <span class="desktop-computers">
-                                 <div class="row">
-                                  <div class="col-xxs-12 col-xs-7 col-sm-8 col-md-8 col-lg-10 desktop-computers-item">
-                                    Desktop Computers
-                                  </div>
-                                  <div class="col-xxs-12 col-xs-5 col-sm-4 col-md-4 col-lg-2">
-                                    <span class="desktop-computers-percentage">76.7%</span>
-                                  </div>
-                                 </div>
-                                </span>
-
-                                <span class="smartphones">
-                                  <div class="row">
-                                   <div class="col-xxs-12 col-xs-7 col-sm-8 col-md-8 col-lg-10 smartphones-item">
-                                     Smartphones
+                      <div class="col-xxs-12 col-xs-12 col-md-6 col-6 test">
+                        <div class="multiple-card-wrapper">
+                          <div class="card fadeIn-6">
+                            <div class="type-chart-card">
+                              <div class="type-chart-title">
+                                <h5>Sale report of year</h5>
+                              </div>
+                              <div class="type-chart-card-body">
+                                <div id="type-chart"></div>
+                                <div class="type-chart-description">
+                                  
+                                  
+                                  <span class="desktop-computers">
+                                   <div class="row">
+                                    <div class="col-xxs-12 col-xs-7 col-sm-8 col-md-8 col-lg-10 desktop-computers-item">
+                                      Desktop Computers
+                                    </div>
+                                    <div class="col-xxs-12 col-xs-5 col-sm-4 col-md-4 col-lg-2">
+                                      <span class="desktop-computers-percentage">76.7%</span>
+                                    </div>
                                    </div>
-                                   <div class="col-xxs-12 col-xs-5 col-sm-4 col-md-4 col-lg-2">
-                                     <span class="smartphones-percentage">15%</span>
-                                   </div>
-                                  </div>
-                                 </span>
-
-
-                                 <span class="tablets">
-                                  <div class="row">
-                                   <div class="col-xxs-12 col-xs-7 col-sm-8 col-md-8 col-lg-10 tablets-item">
-                                     Tablets
-                                   </div>
-                                   <div class="col-xxs-12 col-xs-5 col-sm-4 col-md-4 col-lg-2">
-                                     <span class="tablets-percentage">30%</span>
-                                   </div>
-                                  </div>
-                                 </span>
-
+                                  </span>
+  
+                                  <span class="smartphones">
+                                    <div class="row">
+                                     <div class="col-xxs-12 col-xs-7 col-sm-8 col-md-8 col-lg-10 smartphones-item">
+                                       Smartphones
+                                     </div>
+                                     <div class="col-xxs-12 col-xs-5 col-sm-4 col-md-4 col-lg-2">
+                                       <span class="smartphones-percentage">15%</span>
+                                     </div>
+                                    </div>
+                                   </span>
+  
+  
+                                   <span class="tablets">
+                                    <div class="row">
+                                     <div class="col-xxs-12 col-xs-7 col-sm-8 col-md-8 col-lg-10 tablets-item">
+                                       Tablets
+                                     </div>
+                                     <div class="col-xxs-12 col-xs-5 col-sm-4 col-md-4 col-lg-2">
+                                       <span class="tablets-percentage">30%</span>
+                                     </div>
+                                    </div>
+                                   </span>
+  
+                                </div>
                               </div>
                             </div>
                           </div>
+  
+                          
+                          <div class="card">
+                            <div class="coversions-chart1-wrapper">
+                                <div class="card-body">
+                                  <h6>Conversions <span>( purchased )</span></h6>
+                                  <h4>0.85% <span class="conversions-chart1-percentage"><i data-feather="arrow-up" class="chart1-percentage"></i> 0.50%</span></h4>
+                                </div>
+                                
+                                <div id="coversions-chart1">
+      
+                                </div>
+                            </div>
+                            
+                          </div>
+
+
                         </div>
                       </div>
 
-                      <div class="col-xxs-12 col-xs-12 col-md-6 col-6">
+                      <div class="col-xxs-12 col-xs-12 col-md-6 col-6 test">
                         <div class="card fadeIn-65">
                           <div class="map-chart-card">
                             <div class="map-chart-title">
-                              <h5>Sale report of year</h5>
+                              <h5>Visits by Location</h5>
                             </div>
                             <div class="map-chart-card-body">
                               <div id="am-map-chart"></div>
@@ -421,8 +446,10 @@
                     </div>
                   </div>
                 </div>
-                </div>
+
+
               </div>
+            </div>
               
           </div>
           </div>
