@@ -4,6 +4,9 @@ Responsive & interactive dashboard designed to visualize various types of perfor
 Project has been made to show my basic skills of HTML, CSS, JS and RWD. My inspiration to create that one page of Dashboard was project made in the following link: [https://html.phoenixcoded.net/elite-able](https://html.phoenixcoded.net/elite-able/bootstrap/default/index.html#!).
 I didn't recreate that project 1:1 because it was exercise for me, the purpose was refreshing my knowledge about HTML, CSS, JS, RWD and so on. Data for charts has been copied from original source- rest things like HTML, CSS, JS, RWD have been made from ground up.
 
+# 📺Demo
+[Deployed Dashboard](https://strejcik.github.io/-HTML-CSS-JS-Dashboard/)
+
 ## 👇Brief summary
 - Basic Structure: The page uses semantic HTML5 tags like <!doctype html> and includes a head section with essential meta tags for responsiveness (viewport) and character encoding (UTF-8). It also links external resources such as Google Fonts and stylesheets.
 
